@@ -1,3 +1,6 @@
+// Problem: journey_839C
+// Date: 2026-05-06
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,6 +18,5 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    solve();
-    return 0;
+    
 }
