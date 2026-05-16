@@ -1,4 +1,4 @@
-// Problem: Remilia_2228B
+// Problem: Cirno_easy_2228C1
 // Date: 2026-05-16
 
 #include <bits/stdc++.h>
@@ -11,17 +11,13 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 
 void solve() {
-    int n, x1, x2, k;
-    cin >> n >> x1 >> x2 >> k;
-    
-    int diff = min(abs(x1 - x2), n - abs(x1 - x2));
-    
-    if (n <= 3) {
-        cout << 1 << "\n";
-    } else {
-        ll ans = (ll)diff + k;
-        cout << ans << "\n";
-    }
+    // Your solution here
+    int a,n;
+    cin>>a>>n;
+    vector<int> d(n);
+    for(int i=0;i<n;i++) cin>>d[i];
+    int ans = min({abs(a-d[0]), abs(a-d[1]), abs(a-(10*d[0]+d[1])), abs(a-(10*d[1]+d[0]))});
+    cout << ans << "\n";
 }
 
 int main() {
