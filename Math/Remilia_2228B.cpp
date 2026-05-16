@@ -1,4 +1,4 @@
-// Problem: Marisa_2228A
+// Problem: Remilia_2228B
 // Date: 2026-05-16
 
 #include <bits/stdc++.h>
@@ -12,22 +12,12 @@ using namespace std;
 
 void solve() {
     // Your solution here
-    int n;
-    cin >> n;
-    unordered_map<int, int> freq;
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        freq[x]++;
-    }
-    ll ans = 0;
-    ans+= freq[0];
-    int m = min(freq[1], freq[2]);
-    ans+= m;
-    freq[1]-=m;
-    freq[2]-=m;
-    ans+= freq[1]/3;
-    ans+= freq[2]/3;
+    int n,x1,x2,k;
+    cin>>n>>x1>>x2>>k;
+    ll ans=0;
+    ans+=k+1;
+    int diff = min(abs(x1-x2)-1,n - abs(x1-x2)+1);
+    ans+=diff;
     cout << ans << endl;
 
 }
